@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traverse Computation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS to fix the image size */
+        .header-image {
+            width: 300px;  /* Set the desired width */
+            height: auto;  /* Keeps the aspect ratio intact */
+            display: block; /* Ensures proper alignment of the image */
+            margin: 0 auto; /* Optional: centers the image */
+        }
+        /* Styling the header */
+        header {
+            text-align: center;  /* Aligns the content to the center */
+            padding: 20px; /* Adds padding around the header */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="traverse-image.jpg" alt="Traverse Computation" class="header-image">
+            <h1>Traverse Computation Calculator</h1>
+            <h4>Design By Shivnandan Ray Yadav</h4>
+        </header>
+
+        <form id="traverse-form">
+            <label for="numPoints">Number of Points:</label>
+            <input type="number" id="numPoints" min="2" required>
+
+            <div id="points-input"></div>
+
+            <label for="startAzimuth">Starting Azimuth (degrees):</label>
+            <input type="number" id="startAzimuth" required>
+
+            <label for="startEasting">Starting Easting (X):</label>
+            <input type="number" id="startEasting" required>
+
+            <label for="startNorthing">Starting Northing (Y):</label>
+            <input type="number" id="startNorthing" required>
+
+            <button type="button" onclick="computeTraverse()">Compute Traverse</button>
+        </form>
+
+        <div id="results"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
